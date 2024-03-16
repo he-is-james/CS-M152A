@@ -37,6 +37,7 @@ module update
         input wire [9:0] bar_op7,
         input wire [9:0] player_h,
         input wire [9:0] player_v,
+        input wire [9:0] level,
         output wire [9:0] points,
         output wire reset_player
     );
@@ -48,16 +49,16 @@ module update
     always @ (posedge clk or posedge reset)
         begin
             // check collisions
-            if (~reset && rst_player == 1) begin
+            if(reset) begin
+                score = 0;
+                rst_player = 1;
+            end
+            else if (~reset && rst_player == 1) begin
                 cnt = cnt - 1;
                 if (cnt == 0) begin
                     rst_player = 0;
                     cnt = 2;
                 end
-            end
-            else if(reset) begin
-                score = 0;
-                rst_player = 1;
             end
             else begin
                 if(player_h > 60 && player_h < 180) begin // 80 - 160
@@ -102,7 +103,7 @@ module update
                         rst_player = 1;
                     end
                 end
-                score = (player_h - 120) / 80;
+                score = (level * 5) + ((player_h - 40) / 80);
             end
         end
 

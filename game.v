@@ -121,6 +121,7 @@ module game(
         .bar_op7(bar_op7),
         .player_h(player_h),
         .player_v(player_v),
+        .level(level),
         .points(score),
         .reset_player(rst_player)
    );
