@@ -152,9 +152,9 @@ module vga_sync
 						begin
 							if (v_count_reg <= bar_position[i] || v_count_reg >= (bar_position[i] + bar_opening[i]))
 							begin
-								vgaRed = 4'b0000;
-								vgaGreen = 4'b0000;
-								vgaBlue = 4'b1111;
+								vgaRed = 0;
+								vgaGreen = 0;
+								vgaBlue = 0;
 							end
 							else
 							begin
@@ -165,9 +165,9 @@ module vga_sync
 						end
 						else
 						begin
-							vgaRed = 4'b0000;
-							vgaGreen = 4'b0000;
-							vgaBlue = 4'b1111;
+							vgaRed = 0;
+							vgaGreen = 0;
+							vgaBlue = 0;
 						end
 					end
 				end
