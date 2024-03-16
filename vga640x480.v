@@ -186,7 +186,7 @@ module vga_sync
 				// Score
 				if (digit2[2] == 1)
 				begin
-					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 20 && v_count_reg < 24)
+					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 30 && v_count_reg < 34)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -195,7 +195,7 @@ module vga_sync
 				end
 				if (digit2[1] == 1)
 				begin
-					if (h_count_reg >= 14 && h_count_reg < 18 && v_count_reg >= 20 && v_count_reg < 24)
+					if (h_count_reg >= 14 && h_count_reg < 18 && v_count_reg >= 30 && v_count_reg < 34)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -204,7 +204,7 @@ module vga_sync
 				end
 				if (digit2[0] == 1)
 				begin
-					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 20 && v_count_reg < 24)
+					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 30 && v_count_reg < 34)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -213,7 +213,7 @@ module vga_sync
 				end
 				if (digit2[4] == 1)
 				begin
-					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 24 && v_count_reg < 28)
+					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 34 && v_count_reg < 38)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -222,7 +222,7 @@ module vga_sync
 				end
 				if (digit2[3] == 1)
 				begin
-					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 24 && v_count_reg < 28)
+					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 34 && v_count_reg < 38)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -231,7 +231,7 @@ module vga_sync
 				end
 				if (digit2[7] == 1)
 				begin
-					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 28 && v_count_reg < 32)
+					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 38 && v_count_reg < 42)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -240,7 +240,7 @@ module vga_sync
 				end
 				if (digit2[6] == 1)
 				begin
-					if (h_count_reg >= 14 && h_count_reg < 18 && v_count_reg >= 28 && v_count_reg < 32)
+					if (h_count_reg >= 14 && h_count_reg < 18 && v_count_reg >= 38 && v_count_reg < 42)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -249,7 +249,7 @@ module vga_sync
 				end
 				if (digit2[5] == 1)
 				begin
-					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 28 && v_count_reg < 32)
+					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 38 && v_count_reg < 42)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -258,7 +258,7 @@ module vga_sync
 				end
 				if (digit2[9] == 1)
 				begin
-					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 32 && v_count_reg < 36)
+					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 42 && v_count_reg < 46)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -267,7 +267,7 @@ module vga_sync
 				end
 				if (digit2[8] == 1)
 				begin
-					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 32 && v_count_reg < 36)
+					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 42 && v_count_reg < 46)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -276,7 +276,7 @@ module vga_sync
 				end
 				if (digit2[12] == 1)
 				begin
-					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 36 && v_count_reg < 40)
+					if (h_count_reg >= 10 && h_count_reg < 14 && v_count_reg >= 46 && v_count_reg < 50)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -285,7 +285,7 @@ module vga_sync
 				end
 				if (digit2[11] == 1)
 				begin
-					if (h_count_reg >= 14 && h_count_reg < 18 && v_count_reg >= 36 && v_count_reg < 40)
+					if (h_count_reg >= 14 && h_count_reg < 18 && v_count_reg >= 46 && v_count_reg < 50)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -294,7 +294,7 @@ module vga_sync
 				end
 				if (digit2[10] == 1)
 				begin
-					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 36 && v_count_reg < 40)
+					if (h_count_reg >= 18 && h_count_reg < 22 && v_count_reg >= 46 && v_count_reg < 50)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -302,9 +302,9 @@ module vga_sync
 					end
 				end
 
-				if (digit1[0] == 1)
+				if (digit1[2] == 1)
 				begin
-					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 20 && v_count_reg < 24)
+					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 30 && v_count_reg < 34)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -313,25 +313,16 @@ module vga_sync
 				end
 				if (digit1[1] == 1)
 				begin
-					if (h_count_reg >= 34 && h_count_reg < 38 && v_count_reg >= 20 && v_count_reg < 24)
+					if (h_count_reg >= 34 && h_count_reg < 38 && v_count_reg >= 30 && v_count_reg < 34)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
 						vgaBlue = 4'b1111;
 					end
 				end
-				if (digit1[2] == 1)
+				if (digit1[0] == 1)
 				begin
-					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 20 && v_count_reg < 24)
-					begin
-						vgaRed = 4'b1111;
-						vgaGreen = 4'b00000;
-						vgaBlue = 4'b1111;
-					end
-				end
-				if (digit1[3] == 1)
-				begin
-					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 24 && v_count_reg < 28)
+					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 30 && v_count_reg < 34)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -340,25 +331,16 @@ module vga_sync
 				end
 				if (digit1[4] == 1)
 				begin
-					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 24 && v_count_reg < 28)
+					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 34 && v_count_reg < 38)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
 						vgaBlue = 4'b1111;
 					end
 				end
-				if (digit1[5] == 1)
+				if (digit1[3] == 1)
 				begin
-					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 28 && v_count_reg < 32)
-					begin
-						vgaRed = 4'b1111;
-						vgaGreen = 4'b00000;
-						vgaBlue = 4'b1111;
-					end
-				end
-				if (digit1[6] == 1)
-				begin
-					if (h_count_reg >= 34 && h_count_reg < 38 && v_count_reg >= 28 && v_count_reg < 32)
+					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 34 && v_count_reg < 38)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -367,16 +349,25 @@ module vga_sync
 				end
 				if (digit1[7] == 1)
 				begin
-					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 28 && v_count_reg < 32)
+					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 38 && v_count_reg < 42)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
 						vgaBlue = 4'b1111;
 					end
 				end
-				if (digit1[8] == 1)
+				if (digit1[6] == 1)
 				begin
-					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 32 && v_count_reg < 36)
+					if (h_count_reg >= 34 && h_count_reg < 38 && v_count_reg >= 38 && v_count_reg < 42)
+					begin
+						vgaRed = 4'b1111;
+						vgaGreen = 4'b00000;
+						vgaBlue = 4'b1111;
+					end
+				end
+				if (digit1[5] == 1)
+				begin
+					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 38 && v_count_reg < 42)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -385,25 +376,16 @@ module vga_sync
 				end
 				if (digit1[9] == 1)
 				begin
-					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 32 && v_count_reg < 36)
+					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 42 && v_count_reg < 46)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
 						vgaBlue = 4'b1111;
 					end
 				end
-				if (digit1[10] == 1)
+				if (digit1[8] == 1)
 				begin
-					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 36 && v_count_reg < 40)
-					begin
-						vgaRed = 4'b1111;
-						vgaGreen = 4'b00000;
-						vgaBlue = 4'b1111;
-					end
-				end
-				if (digit1[11] == 1)
-				begin
-					if (h_count_reg >= 34 && h_count_reg < 38 && v_count_reg >= 36 && v_count_reg < 40)
+					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 42 && v_count_reg < 46)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
@@ -412,7 +394,25 @@ module vga_sync
 				end
 				if (digit1[12] == 1)
 				begin
-					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 36 && v_count_reg < 40)
+					if (h_count_reg >= 30 && h_count_reg < 34 && v_count_reg >= 46 && v_count_reg < 50)
+					begin
+						vgaRed = 4'b1111;
+						vgaGreen = 4'b00000;
+						vgaBlue = 4'b1111;
+					end
+				end
+				if (digit1[11] == 1)
+				begin
+					if (h_count_reg >= 34 && h_count_reg < 38 && v_count_reg >= 46 && v_count_reg < 50)
+					begin
+						vgaRed = 4'b1111;
+						vgaGreen = 4'b00000;
+						vgaBlue = 4'b1111;
+					end
+				end
+				if (digit1[10] == 1)
+				begin
+					if (h_count_reg >= 38 && h_count_reg < 42 && v_count_reg >= 46 && v_count_reg < 50)
 					begin
 						vgaRed = 4'b1111;
 						vgaGreen = 4'b00000;
