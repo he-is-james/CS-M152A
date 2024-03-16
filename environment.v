@@ -48,7 +48,10 @@ module environment(
     reg signed [9:0] l1_bp [7:0];
     reg signed [9:0] l1_bo [7:0];
     reg signed [9:0] l1_bs [7:0];
-    // Level 2
+    reg signed [9:0] l2_bp [7:0];
+    reg signed [9:0] l2_bo [7:0];
+    reg signed [9:0] l2_bs [7:0];
+    
     reg signed [9:0] l2_bp [7:0];
     reg signed [9:0] l2_bo [7:0];
     reg signed [9:0] l2_bs [7:0];
@@ -64,12 +67,12 @@ module environment(
         l1_bp[5] = 120;
         l1_bp[6] = 120;
 
-        l1_bo[1] = 150;
-        l1_bo[2] = 150;
-        l1_bo[3] = 150;
-        l1_bo[4] = 150;
-        l1_bo[5] = 150;
-        l1_bo[6] = 150;
+        l1_bo[1] = 60;
+        l1_bo[2] = 60;
+        l1_bo[3] = 60;
+        l1_bo[4] = 60;
+        l1_bo[5] = 60;
+        l1_bo[6] = 60;
 
         l1_bs[1] = -10;
         l1_bs[2] = -15;
@@ -87,19 +90,20 @@ module environment(
         l2_bp[5] = 120;
         l2_bp[6] = 120;
 
-        l2_bo[1] = 180;
-        l2_bo[2] = 100;
-        l2_bo[3] = 180;
+        l2_bo[1] = 60;
+        l2_bo[2] = 80;
+        l2_bo[3] = 70;
         l2_bo[4] = 90;
-        l2_bo[5] = 100;
-        l2_bo[6] = 100;
+        l2_bo[5] = 200;
+        l2_bo[6] = 60;
 
-        l2_bs[1] = -20;
-        l2_bs[2] = -10;
-        l2_bs[3] = 20;
-        l2_bs[4] = -15;
+        l2_bs[1] = 20;
+        l2_bs[2] = 10;
+        l2_bs[3] = -20;
+        l2_bs[4] = 0;
         l2_bs[5] = 15;
         l2_bs[6] = 25;
+
     end
 
     initial

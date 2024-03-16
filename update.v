@@ -72,35 +72,35 @@ module update
                 end
                 if(player_h > 140 && player_h < 260) begin // 160 - 240
                     // check vertical
-                    if(player_v + 20 > bar_pos2 && player_v - 20 < bar_pos2 + bar_op2) begin
+                    if(player_v + 20 > bar_pos3 && player_v - 20 < bar_pos3 + bar_op3) begin
                         temp = 0;
                         rst_player = 1;
                     end
                 end
                 if(player_h > 200 && player_h < 340) begin // 240 - 320
                     // check vertical
-                    if(player_v + 20 > bar_pos2 && player_v - 20 < bar_pos2 + bar_op2) begin
+                    if(player_v + 20 > bar_pos4 && player_v - 20 < bar_pos4 + bar_op4) begin
                         temp = 0;
                         rst_player = 1;
                     end
                 end
                 if(player_h > 300 && player_h < 420) begin // 320 - 400
                     // check vertical
-                    if(player_v + 20 > bar_pos2 && player_v - 20 < bar_pos2 + bar_op2) begin
+                    if(player_v + 20 > bar_pos5 && player_v - 20 < bar_pos5 + bar_op5) begin
                         temp = 0;
                         rst_player = 1;
                     end
                 end
                 if(player_h > 380 && player_h < 500) begin // 400 - 480
                     // check vertical
-                    if(player_v + 20 > bar_pos2 && player_v - 20 < bar_pos2 + bar_op2) begin
+                    if(player_v + 20 > bar_pos6 && player_v - 20 < bar_pos6 + bar_op6) begin
                         temp = 0;
                         rst_player = 1;
                     end
                 end
                 if(player_h > 460 && player_h < 580) begin // 480 - 560
                     // check vertical
-                    if(player_v + 20 > bar_pos2 && player_v - 20 < bar_pos2 + bar_op2) begin
+                    if(player_v + 20 > bar_pos7 && player_v - 20 < bar_pos7 + bar_op7) begin
                         temp = 0;
                         rst_player = 1;
                     end
