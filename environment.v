@@ -43,31 +43,79 @@ module environment(
     
     reg[9:0] bar_height = 'd0;
     reg[9:0] bar_position[7:0]; // top of opening
-    reg moving[7:0];
     reg[9:0] bar_opening[7:0];   // how big the opening is
     reg[9:0] bar_speed[7:0];
+    // Level 1
+    reg [9:0] l1_bp [7:0];
+    reg [9:0] l1_bo [7:0];
+    reg [9:0] l1_bs [7:0];
     
     integer i;
     
     initial begin
-        for (i=0; i < 8; i=i+1) begin
-            moving[i] = 1; 
-            bar_opening[i] = 60;
-            bar_position[i] = 120;
-            bar_speed[i] = 20;
-        end
-        moving[0] = 0;
-        moving[7] = 0;
+        // Level 1
+        l1_bp[1] = 240;
+        l1_bp[2] = 240;
+        l1_bp[3] = 120;
+        l1_bp[4] = 240;
+        l1_bp[5] = 120;
+        l1_bp[6] = 120;
+
+        l1_bo[1] = 60;
+        l1_bo[2] = 60;
+        l1_bo[3] = 60;
+        l1_bo[4] = 60;
+        l1_bo[5] = 60;
+        l1_bo[6] = 60;
+
+        l1_bs[1] = -10;
+        l1_bs[2] = -15;
+        l1_bs[3] = 10;
+        l1_bs[4] = -10;
+        l1_bs[5] = 15;
+        l1_bs[6] = 10;
+
+
+        // Level 2
+        l2_bp[1] = 240;
+        l2_bp[2] = 240;
+        l2_bp[3] = 120;
+        l2_bp[4] = 240;
+        l2_bp[5] = 120;
+        l2_bp[6] = 120;
+
+        l2_bo[1] = 60;
+        l2_bo[2] = 80;
+        l2_bo[3] = 70;
+        l2_bo[4] = 90;
+        l2_bo[5] = 100;
+        l2_bo[6] = 60;
+
+        l2_bs[1] = -20;
+        l2_bs[2] = -10;
+        l2_bs[3] = 20;
+        l2_bs[4] = -15;
+        l2_bs[5] = 15;
+        l2_bs[6] = 25;
+
     end
     
     always @ (posedge clkenv)
     begin
         if(~pause) begin
-            for (i=0; i < 8; i=i+1) begin
-                if (moving[i])
-                    bar_position[i] = bar_position[i] + bar_speed[i] * level;//
-                if (bar_position[i] > 480) //different directions later
+            for(i = 1; i < 7; i = i + 1) begin
+                if (level % 2 == 1) begin
+                    bar_position[i] = l1_bp[i] + l1_bs[i];
+                    bar_opening[i] = l1_bo[i];
+                end
+                if (level % 2 == 2) begin
+                    bar_position[i] = l2_bp[i] + l2_bs[i];
+                    bar_opening[i] = l2_bo[i];
+                end
+                if (bar_position[i] > 480)
                     bar_position[i] = 0;
+                if (bar_position[i] < 0)
+                    bar_position[i] = 480;
             end
         end
     end
