@@ -50,6 +50,10 @@ module environment(
     reg [9:0] l1_bo [7:0];
     reg [9:0] l1_bs [7:0];
     
+    reg [9:0] l2_bp [7:0];
+    reg [9:0] l2_bo [7:0];
+    reg [9:0] l2_bs [7:0];
+    
     integer i;
     
     initial begin

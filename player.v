@@ -47,6 +47,7 @@ module player(
         begin
             h = 40;
             v = 240;
+            level = 1;
         end
         else if (pause) begin
             h = h;
@@ -65,7 +66,7 @@ module player(
                 else
                 begin
                     level = level + 1;
-                    h = 0;
+                    h = 40;
                 end
             end
             if (down && v + 40 < 480)

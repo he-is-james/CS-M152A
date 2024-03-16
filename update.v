@@ -44,7 +44,9 @@ module update
 
     reg rst_player;
     reg [9:0] score = 0;
+    reg [9:0] temp = 0;
     reg [3:0] cnt = 2;
+    
 
     always @ (posedge clk or posedge reset)
         begin
@@ -103,7 +105,20 @@ module update
                         rst_player = 1;
                     end
                 end
-                score = (level * 5) + ((player_h - 40) / 80);
+                
+                if(player_h > 120)
+                    temp = 'd1;
+                if(player_h > 200)
+                    temp = 'd2;
+                if(player_h > 280)
+                    temp = 'd3;
+                if(player_h > 360)
+                    temp = 'd4;
+                if(player_h > 420)
+                    temp = 'd5;
+                if(player_h > 500)
+                    temp = 'd6;
+                score = (level * 6) + temp; // 40 120 200 280 
             end
         end
 

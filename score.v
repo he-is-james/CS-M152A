@@ -35,8 +35,8 @@ module score
 
     always @ (posedge clk)
     begin
-        a = score % 10;
-        b = score / 10;
+        a = score % 'd10;
+        b = score / 'd10;
 
         case(a)
             0: ones = 13'b1111110111111;
