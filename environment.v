@@ -41,20 +41,20 @@ module environment(
     output wire [9:0] bar_op8
     );
     
-    reg[9:0] bar_height = 'd0;
-    reg[9:0] bar_position[7:0]; // top of opening
-    reg[9:0] bar_opening[7:0];   // how big the opening is
+    reg signed [9:0] bar_height = 'd0;
+    reg signed [9:0] bar_position[7:0]; // top of opening
+    reg signed [9:0] bar_opening[7:0];   // how big the opening is
     // Level 1
-    reg [9:0] l1_bp [7:0];
-    reg [9:0] l1_bo [7:0];
-    reg [9:0] l1_bs [7:0];
-    reg [9:0] l2_bp [7:0];
-    reg [9:0] l2_bo [7:0];
-    reg [9:0] l2_bs [7:0];
+    reg signed [9:0] l1_bp [7:0];
+    reg signed [9:0] l1_bo [7:0];
+    reg signed [9:0] l1_bs [7:0];
+    reg signed [9:0] l2_bp [7:0];
+    reg signed [9:0] l2_bo [7:0];
+    reg signed [9:0] l2_bs [7:0];
     
-    reg [9:0] l2_bp [7:0];
-    reg [9:0] l2_bo [7:0];
-    reg [9:0] l2_bs [7:0];
+    reg signed [9:0] l2_bp [7:0];
+    reg signed [9:0] l2_bo [7:0];
+    reg signed [9:0] l2_bs [7:0];
     
     integer i;
     
@@ -108,7 +108,7 @@ module environment(
 
     initial
     begin
-        for (i = 1; i < 7; i + 1) begin
+        for (i = 1; i < 7; i = i + 1) begin
             bar_position[i] = l1_bp[i];
             bar_opening[i] = l1_bo[i];
         end
