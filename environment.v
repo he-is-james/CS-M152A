@@ -44,11 +44,13 @@ module environment(
     reg[9:0] bar_height = 'd0;
     reg[9:0] bar_position[7:0]; // top of opening
     reg[9:0] bar_opening[7:0];   // how big the opening is
-    reg[9:0] bar_speed[7:0];
     // Level 1
     reg [9:0] l1_bp [7:0];
     reg [9:0] l1_bo [7:0];
     reg [9:0] l1_bs [7:0];
+    reg [9:0] l2_bp [7:0];
+    reg [9:0] l2_bo [7:0];
+    reg [9:0] l2_bs [7:0];
     
     integer i;
     
@@ -99,17 +101,25 @@ module environment(
         l2_bs[6] = 25;
 
     end
+
+    initial
+    begin
+        for (i = 1; i < 7; i + 1) begin
+            bar_position[i] = l1_bp[i];
+            bar_opening[i] = l1_bo[i];
+        end
+    end
     
     always @ (posedge clkenv)
     begin
         if(~pause) begin
             for(i = 1; i < 7; i = i + 1) begin
                 if (level % 2 == 1) begin
-                    bar_position[i] = l1_bp[i] + l1_bs[i];
+                    bar_position[i] = bar_position[i] + l1_bs[i];
                     bar_opening[i] = l1_bo[i];
                 end
-                if (level % 2 == 2) begin
-                    bar_position[i] = l2_bp[i] + l2_bs[i];
+                if (level % 2 == 0) begin
+                    bar_position[i] = bar_position[i] + l2_bs[i];
                     bar_opening[i] = l2_bo[i];
                 end
                 if (bar_position[i] > 480)
