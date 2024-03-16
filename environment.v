@@ -48,13 +48,18 @@ module environment(
     reg signed [9:0] l1_bp [7:0];
     reg signed [9:0] l1_bo [7:0];
     reg signed [9:0] l1_bs [7:0];
+    // Level 2
     reg signed [9:0] l2_bp [7:0];
     reg signed [9:0] l2_bo [7:0];
     reg signed [9:0] l2_bs [7:0];
-    
-    reg signed [9:0] l2_bp [7:0];
-    reg signed [9:0] l2_bo [7:0];
-    reg signed [9:0] l2_bs [7:0];
+    // Level 3
+    reg signed [9:0] l3_bp [7:0];
+    reg signed [9:0] l3_bo [7:0];
+    reg signed [9:0] l3_bs [7:0];
+    // Level 4
+    reg signed [9:0] l4_bp [7:0];
+    reg signed [9:0] l4_bo [7:0];
+    reg signed [9:0] l4_bs [7:0];
     
     integer i;
     
@@ -103,7 +108,52 @@ module environment(
         l2_bs[4] = 0;
         l2_bs[5] = 15;
         l2_bs[6] = 25;
+    
 
+        // Level 3
+        l3_bp[1] = 240;
+        l3_bp[2] = 240;
+        l3_bp[3] = 120;
+        l3_bp[4] = 240;
+        l3_bp[5] = 120;
+        l3_bp[6] = 120;
+
+        l3_bo[1] = 120;
+        l3_bo[2] = 180;
+        l3_bo[3] = 240;
+        l3_bo[4] = 180;
+        l3_bo[5] = 240;
+        l3_bo[6] = 120;
+
+        l3_bs[1] = 10;
+        l3_bs[2] = -10;
+        l3_bs[3] = -30;
+        l3_bs[4] = 30;
+        l3_bs[5] = -20;
+        l3_bs[6] = 20;
+    
+
+        // Level 4
+        l4_bp[1] = 240;
+        l4_bp[2] = 240;
+        l4_bp[3] = 120;
+        l4_bp[4] = 240;
+        l4_bp[5] = 120;
+        l4_bp[6] = 120;
+
+        l4_bo[1] = 240;
+        l4_bo[2] = 220;
+        l4_bo[3] = 300;
+        l4_bo[4] = 300;
+        l4_bo[5] = 280;
+        l4_bo[6] = 200;
+
+        l4_bo[1] = 10;
+        l4_bo[2] = -10;
+        l4_bo[3] = -20;
+        l4_bo[4] = 10;
+        l4_bo[5] = 20;
+        l4_bo[6] = -20;
     end
 
     initial
@@ -118,13 +168,21 @@ module environment(
     begin
         if(~pause) begin
             for(i = 1; i < 7; i = i + 1) begin
-                if (level % 2 == 1) begin
+                if (level % 4 == 1) begin
                     bar_position[i] = bar_position[i] + l1_bs[i];
                     bar_opening[i] = l1_bo[i];
                 end
-                if (level % 2 == 0) begin
+                if (level % 4 == 2) begin
                     bar_position[i] = bar_position[i] + l2_bs[i];
                     bar_opening[i] = l2_bo[i];
+                end
+                if (level % 4 == 3) begin
+                    bar_position[i] = bar_position[i] + l3_bs[i];
+                    bar_opening[i] = l3_bo[i];
+                end
+                if (level % 4 == 0) begin
+                    bar_position[i] = bar_position[i] + l4_bs[i];
+                    bar_opening[i] = l4_bo[i];
                 end
                 if (bar_position[i] > 480)
                     bar_position[i] = 0;
